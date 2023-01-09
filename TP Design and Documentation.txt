@@ -1,0 +1,100 @@
+﻿Sharon Guan 
+andrewID: sharongu 
+
+
+Project Description: Flappy Bird Family
+
+
+Flappy bird is a side scroller game where the player controls a single bird that attempts to fly between columns of green pipes. As the player taps the spacebar, the bird flaps. The quicker the player taps the spacebar, the higher the bird flies. Each time a bird passes through the pipe, a point is added to the score. The only way the game ends is when the bird either hits a pipe or falls from not flapping its wings. Each pipe is randomized in size with the top pipe sometimes being shorter than the bottom pip or vice versa. As the player plays longer and longer, the game gets harder and harder by thinning the pipes to which the bird has limited space to fit through. There is also a scoreboard that keeps track of your highest score. If the bird passes through 1000 pipes (score of 1000) the player wins. 
+
+
+Competitive Analysis:
+
+
+In a family flappy bird, the concept is the same as the original flappy bird but with more features. In addition to the green pipes there are also ghosts that move up and down.  In the center of where the ghost moves, there is an egg that is worth five points. If the bird gets the egg without touching the ghost, five points would be added to the score. Another feature is allowing the player to choose which bird they want to play with based on the color of the bird they prefer. 
+
+
+Structural Plan: 
+
+
+There will be 3 main parts in the game. There will be a bird class, a pipe/ghost class, and the play class. The smaller parts will include the help mode and the game over mode. 
+
+
+The bird class will hold the bird’s attributes such as its flapping, its mobility, score, and collision. For every flap, the bird will fly a certain height. As the time is running, the bird will drop if the player is not pressing the spacebar for the bird to flap. If the bird collides with the pipe, it will immediately drop as well. 
+
+
+The pipe/ghost class will generate pipes according to the time and size of the bird. It will be scrolling to the left every x amount of times as long as the player is still playing. If the bird collides or falls, the pipes stop generating and the ghosts stop moving. In the timing part of generating pipes and ghost, for ever 10 pipes passed,  ghost will be generated (or for every 5 second pass, a ghost will be generated)
+
+
+Help mode will basically give the player instructions on how to play. You can switch back from play mode to help mode. The game over mode will not switch to another mode but will pop the score and allow the player to restart. 
+
+
+Algorithmic plan: 
+The trickiest part of the project will be the generation of the pipes and the ghosts. Since the ghosts will move up and down while side scrolling, the movement of it will most likely be timed based. For every (possibly) 5 milliseconds, the pipes will move 1(maybe) pixel to the left. For the ghosts, as the ghosts move up and down, they will also move by their x coordinate to the left as it moves by the y coordinate. The egg in the middle will just move by the x coordinate. 
+
+
+Timeline: 
+
+
+Monday: Make a basic flappy bird without the image.
+* Make green rectangles that represent the pipes 
+* Have the pipes scrolling as they are generated
+* Have a pipes list that keeps track of its position 
+* Have a circle represent the bird 
+* The circle can only move up and down 
+* The circle will only move down unless the player clicks the space bar for it to move up 
+* If the bird collides or drops, it will stop the generation of the bird
+* Have a flagger for collision and dropping 
+* Have a score in the top middle 
+* Have a key to reset 
+
+
+Tuesday: Uses images and make the ghost 
+* Be able to use the bird (without sprite) 
+* Have pipes generated 
+* Make the ghost go up and down while side scrolling 
+* Import background 
+
+
+
+
+Wednesday: bird movement
+* Have the bird flapping 
+* Import ghost image to move up and down 
+* Have the egg set to the middle 
+* Have a timer to keep track of difficulty 
+
+
+Thursday: Work on mouse press and buttons 
+* Make help mode
+* Have game over mode 
+* Score board 
+* Different types of players 
+
+
+Friday: 
+* Finish whatever I didn;t finish 
+
+
+Version Control: 
+* Have a USB to save everything 
+* Have a folder that saves files from time to time
+
+
+  
+ 
+  
+
+TP2 Update:
+* Schedule expectations were not met 
+* Images (bird,pipe,ghost) have not be coded in yet
+* Bird is not flapping yet 
+* Start and game over mode has been placed already
+
+
+TP3 Update: 
+* Not all of the designs were met (The score number font) 
+* Ghost image is different from the actual ghost in flappy bird (couldn’t find the sprite)
+* Birds are flapping 
+* Images have been loaded 
+* Modes are done (help mode,start mode,game over mode)
